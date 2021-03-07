@@ -51,7 +51,7 @@ class procesList:
     
     def setListTimeStamps(self):
         self.mainList[0].setTSbyProcesStart(0)
-        print('-------')
+        #print('-------')
         for idx,singleProces in enumerate(self.mainList[1:]):
             singleProces.setTSbyMillingStart(self.mainList[idx].endMilling)
     def printListTimeStamps(self):
@@ -75,12 +75,20 @@ minmalnaDlugosc = 1000000000000000
 minimalP = 10000000000000
 minimalQ = 10000000000000
 minimalR = 10000000000000
-for idxR in range(101):
-    for idxP in range(101):
-        y.sortListByWage(idxP/100,0,idxR)
-        y.setListTimeStamps()
-        if(y.ListTimeLength()<minmalnaDlugosc):
-            minmalnaDlugosc = y.ListTimeLength()
+for idxQ in range(11):
+    for idxR in range(201):
+        for idxP in range(201):
+            y.sortListByWage(idxP/200,idxQ/10,idxR/200)
+            y.setListTimeStamps()
+            if(y.ListTimeLength()<minmalnaDlugosc):
+                minmalnaDlugosc = y.ListTimeLength()
+                minimalP=idxP/100
+                minimalR=idxR/100
+                minimalQ=idxQ/100
+print(minmalnaDlugosc)
+print(minimalP)
+print(minimalQ)
+print(minimalR)
 
 #y.printListTimeStamps()
 #print(y.ListTimeLength())
