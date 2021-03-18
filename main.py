@@ -81,11 +81,11 @@ propR = 100
 for idxQ in range(propQ +1):
     for idxR in range(propR +1):
         for idxP in range(propP +1):
-            y.sortListByWage(idxP/propP,idxQ/propQ,idxR/propR)
+            y.sortListByWage((idxP/propP),idxQ/propQ,idxR/propR)
             y.setListTimeStamps()
             if(y.ListTimeLength()<minmalnaDlugosc):
                 minmalnaDlugosc = y.ListTimeLength()
-                minimalP=idxP/propP
+                minimalP=(idxP/propP)
                 minimalR=idxR/propR
                 minimalQ=idxQ/propQ
 print(minmalnaDlugosc)
