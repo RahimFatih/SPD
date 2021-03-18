@@ -75,10 +75,10 @@ minmalnaDlugosc = 1000000000000000
 minimalP = 10000000000000
 minimalQ = 10000000000000
 minimalR = 10000000000000
-for idxQ in range(11):
-    for idxR in range(201):
-        for idxP in range(201):
-            y.sortListByWage(idxP/200,idxQ/10,idxR/200)
+for idxQ in range(101):
+    for idxR in range(101):
+        for idxP in range(101):
+            y.sortListByWage(idxP/100,idxQ/100,idxR/100)
             y.setListTimeStamps()
             if(y.ListTimeLength()<minmalnaDlugosc):
                 minmalnaDlugosc = y.ListTimeLength()
