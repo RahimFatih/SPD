@@ -1,6 +1,3 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
 import numpy
 import re
 p = []
@@ -13,23 +10,11 @@ with open("dataPY.txt","r") as data:
         w.append(int(s[1]))
         d.append(int(s[2]))
 
-
-# %%
 n=len(p)
 N=1<<n
 F=[0]
 ListaL=[[]]
-print(n)
-print(N)
-print(ListaL[0])
 
-
-# %%
-for x in range(3):
-    print(x)
-
-
-# %%
 for set in range(1,N):
     sumaP=0
     b=1
@@ -51,14 +36,10 @@ for set in range(1,N):
                 ListaL[set]=pomocniczy.copy()
                 F[set]=F[set - b] + w[j] * max(c - d[j], 0)
         b=b*2
+print("Jedna z najkrótszych kombinacji: ",ListaL[-1])
+print("O długości: ",F[-1])
 
 
-# %%
-print(F[-1])
-
-
-# %%
-print(ListaL[-1])
 
 
 
