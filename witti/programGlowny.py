@@ -1,10 +1,12 @@
 import numpy
 import re
+import timeit
+start = timeit.default_timer()
 p = []
 w = []
 d = []
 with open("dataPY.txt","r") as data:
-    for n in range(10):
+    for n in range(4):
         s=(data.readline()).split()
         p.append(int(s[0]))
         w.append(int(s[1]))
@@ -24,7 +26,6 @@ for set in range(1,N):
         if (set&b):
             c=c+p[j]
         b*=2
-    ####DZIALA!!!!!###
     F.append(99999999)
     ListaL.append([])
     b=1
@@ -38,10 +39,5 @@ for set in range(1,N):
         b=b*2
 print("Jedna z najkrótszych kombinacji: ",ListaL[-1])
 print("O długości: ",F[-1])
-
-
-
-
-
-
-
+stop = timeit.default_timer()
+print('Time: ', stop - start)
