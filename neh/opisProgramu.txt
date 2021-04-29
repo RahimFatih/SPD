@@ -1,0 +1,19 @@
+Czasy wykonywania zadań na maszynach są zapisane w postaci macierzy
+np.
+    M_1 M_2 M_3 
+N_1  1   3   8
+N_2  9   3   5
+N_3  7   8   6
+N_4  4   8   7
+
+timeToEnd to funkcja, która oblicza czas trwania kolejki zadań, która zosała przekazana do funkcji
+
+Reszta programu odpowiada za znalezienie najlepszej kolejki
+Najpierw znajdujemy z pozostałych zadań do skolejkowania, zadanie o największym czasie produkcji
+Następnie wybiaramy dla tego zadania najlepsze miejsce w kolejce.
+Powtarzamy tak dla każdego kolejnego zadania
+
+Wnioski
+Algorytm, który rozpisałem dziala tak długo dobrze, jak nie ma zadań o identycznej sumie czasów wykonywania.
+Gdy dwa zadania mają taką samą sumę czasów, algorytm bierze pierwszy z nich bez sprawdzenia, który jest optymalny.
+Gdy próbowałem zaimplementować obsługę tego wyjątku, program zaczął się sypać, więc zrezygnowałem.
